@@ -5,6 +5,7 @@ class Ui{
     init = () =>{
         movieSystem.fetchMovies()
         userSystem.fetchUsers()
+        voucherSystem.fetchVouchers()
 
         //inicjalizacja button
         document.getElementById("login-button").addEventListener("click", checkLogin)
@@ -216,6 +217,30 @@ class Ui{
             newFilm.appendChild(newFilmDuration)
             newFilm.appendChild(buyButton)
             filmlist.appendChild(newFilm)
+        }
+    }
+
+    generateVoucherList=()=>{
+        const Voucherlist = document.getElementsByClassName("voucher-list")[0]
+        for(let i = 0;i<voucherSystem.vouchers.length;i++){
+            const newVoucher = document.createElement("div")
+            newVoucher.classList.add("Voucher")
+
+            const newVoucherTitle = document.createElement("h2")
+            newVoucherTitle.innerText =  voucherSystem.vouchers[i].title
+
+            const newVoucherPrice = document.createElement("p")
+            newVoucherPrice.innerText ="Cena vouchera: " +voucherSystem.vouchers[i].price
+
+            const buyButton = document.createElement("div")
+            buyButton.classList.add("lbutton")
+            buyButton.id = "buy-voucher-"+voucherSystem.vouchers[i].id
+            buyButton.innerText = "Kup voucher"
+
+            newVoucher.appendChild(newVoucherTitle)
+            newVoucher.appendChild(newVoucherPrice)
+            newVoucher.appendChild(buyButton)
+            Voucherlist.appendChild(newVoucher)
         }
     }
 }

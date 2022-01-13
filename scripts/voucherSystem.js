@@ -3,11 +3,13 @@ class VoucherSystem{
         this.vouchers = vouchers
        
     }
-    addVoucher = (title,voucherId, price) =>{ // dodawanie filmów do pamięci
+
+    addVoucher = (title,voucherId, price) =>{ // dodawanie voucherów do pamięci
         const newVoucher = new Voucher(title, voucherId, price)
         this.vouchers.push(newVoucher)
     }
-    fetchVouchers = () => { // pobieranie danych o filmach z api
+
+    fetchVouchers = () => { // pobieranie danych o voucherach z api
         fetch("https://tomson2296.github.io/cinemasystem/database/vouchers.json").then((response) =>{
             return response.json();
         }).then((data) =>{

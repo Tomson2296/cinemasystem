@@ -18,8 +18,18 @@ class User{
         document.getElementsByClassName("cart-control")[0].classList.remove("not-shown")
         document.getElementsByClassName("register-title")[0].classList.add("not-shown")
     }
+
+    logoutUser = () =>{
+        document.getElementsByTagName("nav")[0].classList.remove("not-shown")
+        document.getElementsByClassName("login")[0].classList.remove("not-shown")
+        document.getElementsByClassName("register")[0].classList.remove("not-shown")
+        document.getElementsByClassName("welcome")[0].innerText = " "
+        document.getElementsByClassName("cart-control")[0].classList.remove("not-shown")
+        document.getElementsByClassName("register-title")[0].classList.remove("not-shown")
+    }
+
     buyTicket = (id) =>{
-        const newTicket = new Ticket(id, 1, 16.99, 0)
+        const newTicket = new Ticket(id, 1, 19.99, 0)
         this.tickets.push(newTicket)
     }
     removeTicket = (id) =>{

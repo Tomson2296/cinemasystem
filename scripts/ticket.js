@@ -16,7 +16,8 @@ class Ticket{
         this.price = price
         this.seat = seat
     }
-    setKind=()=>{
+
+    setKind= () =>{
 
     }
     setSeat = () =>{

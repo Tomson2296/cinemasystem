@@ -18,8 +18,8 @@ class User{
         document.getElementsByClassName("cart-control")[0].classList.remove("not-shown")
         document.getElementsByClassName("register-title")[0].classList.add("not-shown")
     }
-    buyTicket = (id, kind, price) =>{
-        const newTicket = new Ticket(id, kind, price, 0)
+    buyTicket = (id) =>{
+        const newTicket = new Ticket(id, 1, 16.99, 0)
         this.tickets.push(newTicket)
     }
     removeTicket = (id) =>{

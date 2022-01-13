@@ -3,9 +3,9 @@ class Ui{
         this.cartState = false
     }
     init = () =>{
-        //localStorage.setItem("users", "[]")
         movieSystem.fetchMovies()
-    
+        userSystem.fetchUsers()
+
         //inicjalizacja button
         document.getElementById("login-button").addEventListener("click", checkLogin)
         document.getElementById("loginNav").addEventListener("click", ()=>{UI.scrollTo(document.getElementsByClassName("login")[0])})
@@ -198,30 +198,29 @@ class Ui{
             const newFilmDirector = document.createElement("p")
             newFilmDirector.innerText = "Reżyser: " + movieSystem.movies[i].director
 
-            const newFilmDescription = document.createElement("p")
-            newFilmDescription.classList.add("description")
-            newFilmDescription.innerText = movieSystem.movies[i].description
+            const newFilmType = document.createElement("p")
+            newFilmType.innerText = "Gatunek filmowy: " + movieSystem.movies[i].movieType
+
+            const newFilmDuration = document.createElement("p")
+            newFilmDuration.innerText = "Czas trwania filmu: " + movieSystem.movies[i].length + " minut"
 
             const buyButton = document.createElement("div")
             buyButton.classList.add("lbutton")
             buyButton.id = "buy-ticket-"+movieSystem.movies[i].id
             buyButton.innerText = "Kup bilet"
     
-
             newFilm.appendChild(newFilmTitle)
             newFilm.appendChild(newFilmReleaseDate)
             newFilm.appendChild(newFilmDirector)
-            newFilm.appendChild(newFilmDescription)
+            newFilm.appendChild(newFilmType)
+            newFilm.appendChild(newFilmDuration)
             newFilm.appendChild(buyButton)
             filmlist.appendChild(newFilm)
         }
     }
 }
-
-
 let loggedUser = null
 const UI = new Ui()
-
 
 document.addEventListener('DOMContentLoaded', (event) => {
     UI.init()

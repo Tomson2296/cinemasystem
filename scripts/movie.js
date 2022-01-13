@@ -1,4 +1,3 @@
-
 class Movie{
     constructor(id,title, movieType, director, date, length){
         this.id = id

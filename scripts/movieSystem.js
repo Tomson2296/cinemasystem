@@ -1,7 +1,7 @@
 class MovieSystem{
     constructor(movies){
         this.movies = movies
-        //this.dataUrl = "https://tomson2296.github.io/cinemasystem/movies.json"
+        this.dataUrl = "https://tomson2296.github.io/cinemasystem/database/movies.json"
     }
 
     addMovie = (id, title, movieType, director, date, length) =>{ // dodawanie filmów do pamięci
@@ -10,15 +10,16 @@ class MovieSystem{
     }
 
     fetchMovies = () => { // pobieranie danych o filmach
-        fetch('https://tomson2296.github.io/cinemasystem/movies.json', {method: 'GET',  headers: {"Content-type": "application/json;charset=UTF-8"}}).then((response) =>{
+        fetch(this.dataUrl).then((response) =>{
             return response.json();
         }).then((data) =>{
-            //console.log(data)
-            for(let i = 0; i<data.count;i++){
-                const film = data.results[i]
+            //console.log(data.length)
+            for(let i = 0; i<data.length;i++){
+                const film = data[i]
+                //console.log(film)
                 this.addMovie(film.id,film.title, film.movieType, film.director, film.date, film.length)
             }
-            console.log(movieSystem)
+            //console.log(movieSystem)
             UI.generateFilmList()
             for(let i = 1;i<=movieSystem.movies.length;i++){
                 document.getElementById("buy-ticket-"+i).addEventListener("click", function(){

@@ -17,8 +17,6 @@ class Voucher{
     }
     
 }
-
-
 //in voucher.js
 
 class VoucherSystem{

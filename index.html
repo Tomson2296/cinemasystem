@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema</title>
+    <title>Cinema Management System</title>
     <link rel="stylesheet" href="styles.css">
     <script src="./scripts/user.js"></script>
     <script src="./scripts/movie.js"></script>
@@ -12,10 +12,10 @@
     <script src="./scripts/ticketKind.js"></script>
     <script src="./scripts/ticket.js"></script>
     <script src="./scripts/movieSystem.js"></script>
+    <script src="./scripts/userSystem.js"></script>
     <script src="./scripts/UI.js"></script>
     <script src="./scripts/login.js"></script>
     <script src="./scripts/register.js"></script>
-    <script type="text/javascript" src="./database/movies.js"></script>
 </head>
 <body>
     <header class = "header">
@@ -51,8 +51,8 @@
         <div class = "film-list">
             
         </div>
-        <h2 class = "login-title">Login</h2>
         <div class="login">
+            <h2 class = "login-title" style="text-align: center">Login</h2>
             <div class = "wrap username-wrap">
                 <label for="login-username">Login</label>
                 <input type = "text" id="login-username" minlength="5"/>
@@ -64,8 +64,9 @@
             </div>
             <div class = "lbutton" id = "login-button">Login</div>
         </div>
-        <h2 class = "register-title">Rejestracja</h2>
+
         <div class = "register">
+            <h2 class = "register-title" style="text-align: center">Rejestracja</h2>
             <div class = "wrap name-wrap">
                 <label for="name">Imię</label>
                 <input type = "text" id="name" minlength="5"/>
@@ -88,7 +89,7 @@
             </div>
             <div class = "wrap phone-wrap">
                 <label for="phone">Numer telefonu</label>
-                <input type = "number" id="phone" minlength="5"/>
+                <input type = "number" id="phone" minlength="5" aria-valuemin="1" min="1"/>
             </div>
             <div class = "lbutton" id = "register-button">Rejestracja</div>
         </div>

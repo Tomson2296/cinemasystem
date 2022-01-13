@@ -1,16 +1,23 @@
 const checkLogin = () =>{ // sprawdzenie czy dane logowania pokrywają się z bazą danych
     const login = document.getElementById("login-username").value
-    const password = document.getElementById("login-password").value 
-    
-    const users = JSON.parse(localStorage.getItem("users"))
-    console.log(users)
+    const password = document.getElementById("login-password").value
+    //console.log(login)
+    //console.log(password)
+    const usersArray = []
+    const usersLength = userSystem.users.length
+    for(let i = 0; i<usersLength;i++){
+        usersArray[i] = userSystem.users[i]
+    }
+    console.log(usersArray)
+    //localStorage.setItem("users", JSON.stringify(usersArray))
+    //console.log(localStorage)
+
     if(login.length == 0 || password.length == 0){
         alert("Podaj login i hasło!")
     }
-    else if(users.length == 0) alert("Nie ma takiego użytkownika!")
     else{
-        const userToLog = users.filter(item=>{
-            return item.login == login && item.password == password
+        const userToLog = usersArray.filter(user=>{
+            return user.login == login && user.password == password
         })
         //console.log(userToLog)
         if(userToLog.length == 1){
@@ -23,6 +30,7 @@ const checkLogin = () =>{ // sprawdzenie czy dane logowania pokrywają się z ba
         }
     }
 }
+
 const setFields = () =>{ // do testów
     document.getElementById("name").value = "Jakub"
     document.getElementById("username").value = "test"

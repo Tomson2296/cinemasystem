@@ -1,4 +1,4 @@
-moviesData = [{"id":1,"title":"Metallica: Some Kind of Monster","movieType":"Documentary","director":"Glen Jordanson","date":"31/10/2020","length":149},
+    [{"id":1,"title":"Metallica: Some Kind of Monster","movieType":"Documentary","director":"Glen Jordanson","date":"31/10/2020","length":149},
     {"id":2,"title":"Jolson Sings Again","movieType":"Musical","director":"Sheryl Wabb","date":"09/01/2021","length":148},
     {"id":3,"title":"Dark Woods (Villmark)","movieType":"Adventure|Horror|Mystery|Thriller","director":"Reynold McDonagh","date":"24/01/2021","length":155},
     {"id":4,"title":"One Potato, Two Potato","movieType":"Drama","director":"Nara Kamena","date":"05/02/2021","length":140},
@@ -17,4 +17,4 @@ moviesData = [{"id":1,"title":"Metallica: Some Kind of Monster","movieType":"Doc
     {"id":17,"title":"Evita","movieType":"Drama|Musical","director":"Nicoline Giacovelli","date":"02/01/2022","length":145},
     {"id":18,"title":"I Have Found It (Kandukondain Kandukondain)","movieType":"Comedy|Drama|Musical|Romance","director":"Devinne Charlesworth","date":"23/12/2020","length":140},
     {"id":19,"title":"Road Home, The (Wo de fu qin mu qin)","movieType":"Drama|Romance","director":"Bambi Isakovitch","date":"16/10/2020","length":135},
-    {"id":20,"title":"Nosferatu (Nosferatu, eine Symphonie des Grauens)","movieType":"Horror","director":"Sascha Grimmett","date":"13/09/2021","length":91}];
+    {"id":20,"title":"Nosferatu (Nosferatu, eine Symphonie des Grauens)","movieType":"Horror","director":"Sascha Grimmett","date":"13/09/2021","length":91}]

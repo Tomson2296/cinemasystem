@@ -12,7 +12,7 @@ class Ticket{
         }
         this.id = id
         this.movieId = movieId
-        this.kind=kind
+        this.kind= kind
         this.price = price
         this.seat = seat
     }

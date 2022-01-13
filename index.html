@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts/user.js"></script>
+    <script src="./scripts/movie.js"></script>
+    <script src="./scripts/seat.js"></script>
+    <script src="./scripts/ticketKind.js"></script>
+    <script src="./scripts/ticket.js"></script>
+    <script src="./scripts/movieSystem.js"></script>
+    <script src="./scripts/UI.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/register.js"></script>
+    <script type="text/javascript" src="./database/movies.js"></script>
+</head>
+<body>
+    <header class = "header">
+        <h2 class = "title">Cinema Management App</h2>
+        <nav>
+            <div class = "login-bar">
+                <!--
+                <div class = "username-wrap">
+                    <label for="login-username">Login</label>
+                    <input type = "text" id="login-username" minlength="5"/>
+                </div>
+
+                <div class = "password-wrap">
+                    <label for="login-password">Hasło</label>
+                    <input type = "password" id="login-password" minlength="5"/>
+                </div>
+                -->
+            </div>
+            <div class = "nav-button">
+                <div class = "lbutton" id = "loginNav">Login</div>
+                <div class = "lbutton" id = "registerNav">Rejestracja</div>
+            </div>
+        </nav>
+        <div class = "cart-control not-shown">
+            <h3 class = "welcome">Witaj, </h3>
+            <div class = "lbutton">Kasa</div>
+        </div>
+
+    </header>
+    <div class = "main">
+        <div class = "banner"></div>
+        <h2>Filmy</h2>
+        <div class = "film-list">
+            
+        </div>
+        <h2 class = "login-title">Login</h2>
+        <div class="login">
+            <div class = "wrap username-wrap">
+                <label for="login-username">Login</label>
+                <input type = "text" id="login-username" minlength="5"/>
+            </div>
+
+            <div class = "wrap password-wrap">
+                <label for="login-password">Hasło</label>
+                <input type = "password" id="login-password" minlength="5"/>
+            </div>
+            <div class = "lbutton" id = "login-button">Login</div>
+        </div>
+        <h2 class = "register-title">Rejestracja</h2>
+        <div class = "register">
+            <div class = "wrap name-wrap">
+                <label for="name">Imię</label>
+                <input type = "text" id="name" minlength="5"/>
+            </div>
+            <div class = "wrap username-wrap">
+                <label for="username">Login</label>
+                <input type = "text" id="username" minlength="5"/>
+            </div>
+            <div class = "wrap surname-wrap">
+                <label for="surname">Nazwisko</label>
+                <input type = "text" id="surname" minlength="5"/>
+            </div>
+            <div class = "wrap email-wrap">
+                <label for="email">Adres email</label>
+                <input type = "email" id="email" minlength="5"/>
+            </div>
+            <div class = "wrap password-wrap">
+                <label for="password">Hasło</label>
+                <input type = "password" id="password" minlength="5"/>
+            </div>
+            <div class = "wrap phone-wrap">
+                <label for="phone">Numer telefonu</label>
+                <input type = "number" id="phone" minlength="5"/>
+            </div>
+            <div class = "lbutton" id = "register-button">Rejestracja</div>
+        </div>
+    </div>
+    <div class = "cart">
+        <h2>Twoje zakupy</h2>
+        <div class = "cart-content"></div>
+        <div class = "sum-of-tickets"></div>
+        <div class = "lbutton" id = "buy-button">Kup teraz!</div>
+        <div class = "lbutton" id = "reservation-button">Rezerwuj!</div>
+    </div>
+    <footer class = "footer">
+        @2022 Cinema App
+    </footer>
+</body>
+</html>

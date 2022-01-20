@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.17.2.css">
+    <script src="./scripts/User.js"></script>
+    <script src="./scripts/Movie.js"></script>
+    <script src="./scripts/Seat.js"></script>
+    <script src="./scripts/TicketKind.js"></script>
+    <script src="./scripts/Ticket.js"></script>
+    <script src="./scripts/Voucher.js"></script>
+    <script src="./scripts/MovieSystem.js"></script>
+    <script src="./scripts/UserSystem.js"></script>
+    <script src="./scripts/VoucherSystem.js"></script>
+    <script src="./scripts/UI.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/register.js"></script>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.17.2.js"></script>
+</body>
+</html>
+<script>
+    import { MovieSystem } from MovieSystem;
+    const site = MovieSystem.dataUrl;
+
+    async function fetch = () => {
+        fetch(dataUrl).then((response) =>{
+            return response.json();
+        }).then((data) =>{
+            //console.log(data.length)
+            for(let i = 0; i<data.length;i++){
+                const film = data[i];
+                //console.log(film)
+                MovieSystem.addMovie(film.id,film.title, film.movieType, film.director, film.date, film.length);
+            }}
+    }}
+
+    QUnit.module('addMovie', function() {
+      QUnit.test('fetch database', function(assert) {
+        assert.equal(add(1, 2), 3);
+      });
+    });
+
+  </script>
